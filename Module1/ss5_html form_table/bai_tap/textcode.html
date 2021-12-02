@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        td {
+            width: 10rem;
+            padding: 0;
+            text-align: right;
+
+        }
+        table {
+            width: 65%;
+        }
+        body {
+            background-color: lightcoral;
+        }
+        form {
+            background-color: white;
+            width: 40rem;
+        }
+        p {
+            color: blue;
+        }
+        .title {
+            background-color: rgb(255, 0, 0);
+            text-align: center;
+            margin: .4rem;
+        }
+        .fav__item {
+            display: inline-block;
+
+        }
+    </style>
+</head>
+<body>
+<form action="TaoFormDonGian.html" method="get" style="width: 40rem;">
+
+    <div class="title"">
+    <h2>SỞ THÍCH CỦA BẠN</h2>
+    </div>
+    <table>
+        <tr>
+            <td><p>Họ và tên</p></td>
+            <td style="text-align: left;"><input type="text" size="40px"></td>
+        </tr>
+        <tr>
+            <td>
+                <p>Email</p>
+            </td>
+            <td style="text-align: left;">
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-top: 0;">
+                <p style="margin-top: 0;">Sở thích</p>
+            </td>
+            <td style="text-align: left; justify-items: center;">
+                <div class="fav__item"><input type="checkbox">Thể Thao</div>
+                <div class="fav__item"><input type="checkbox">Âm nhạc</div>
+                <div class="fav__item"><input type="checkbox">Đọc sách</div>
+                <div class="fav__item"><input type="checkbox">Lướt web</div>
+                <div class="fav__item"><input type="checkbox">Chơi game</div>
+                <div class="fav__item"><input type="checkbox">Điện ảnh</div>
+                <div class="fav__item"><input type="checkbox">Du lịch</div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="text-align: left;">
+                <input type="submit" name="Submit Form" value="Submit Form">
+                <input type="submit" name="Reset Form" value="Reset Form">
+            </td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>
