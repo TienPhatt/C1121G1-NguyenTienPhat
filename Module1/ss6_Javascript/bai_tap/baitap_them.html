@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<h1>JS OVERVIEW</h1>
+<button onclick="Tinhbill()">Click</button>
+
+<input id="sotien" type="text">
+<input id="songuoi" type="text">
+
+
+<script >
+
+
+    function Tinhbill() {
+        let n1 = document.getElementById("sotien").value
+        n1=parseInt(n1);
+        let n2 = document.getElementById("songuoi").value
+        n2=parseInt(n2);
+        let avg = n1/n2;
+        alert(avg);
+
+
+    }
+</script>
+</body>
+</html>

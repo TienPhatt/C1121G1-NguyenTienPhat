@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body background="https://imgt.taimienphi.vn/cf/Images/tt/2020/4/20/mau-hinh-nen-powerpoint-bang-den-2.jpg" style="width:20rem">
+
+<h1>Tính điểm trung bình</h1>
+<p style="color: red"> Điểm toán</p>
+<input id="diemtoan" type="text">
+<br>
+<p style="color: red"> Điểm lý</p>
+<input id="diemly" type="text">
+<br>
+<p style="color: red"> Điểm hoá</p>
+<input id="diemhoa" type="text">
+<br><br>
+<button onclick="tinhdiem()">Tính điểm</button>
+<h1 id="display" style="color: red"> Kết quả :</h1>
+
+<script >
+
+
+    function tinhdiem() {
+        let n1 = document.getElementById("diemtoan").value
+        n1=parseInt(n1);
+        let n2 = document.getElementById("diemly").value
+        n2=parseInt(n2);
+        let n3 = document.getElementById("diemhoa").value
+        n3=parseInt(n3)
+        let avg = (n1 + n2 + n3) / 3;
+        document.getElementById('display').innerHTML = avg;
+
+
+    }
+</script>
+</body>
+</html>
