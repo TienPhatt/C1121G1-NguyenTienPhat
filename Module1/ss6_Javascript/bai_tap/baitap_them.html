@@ -7,23 +7,25 @@
 </head>
 <body>
 
-<h1>JS OVERVIEW</h1>
-<button onclick="Tinhbill()">Click</button>
-
+<h1>Tính tiền </h1>
+<p> Nhập số tiền</p>
 <input id="sotien" type="text">
+<br>
+<p> Nhập số người</p>
 <input id="songuoi" type="text">
-
+<br><br>
+<button onclick="tinhtien()">Tính tiền</button>
 
 <script >
 
 
-    function Tinhbill() {
+    function tinhtien() {
         let n1 = document.getElementById("sotien").value
         n1=parseInt(n1);
         let n2 = document.getElementById("songuoi").value
         n2=parseInt(n2);
         let avg = n1/n2;
-        alert(avg);
+        alert('Giá tiền mỗi người' + avg);
 
 
     }
