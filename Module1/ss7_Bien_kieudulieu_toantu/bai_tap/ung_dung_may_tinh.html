@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<h1 style="color: red"> Caculator</h1>
+<input type="text" id="n1">
+<br>
+<input type="text" id="n2">
+<br>
+<button type="button" onclick="dauCong()">Addition(+)</button>
+<button  type="button" onclick="dauTru()">Subtraction(-)</button>
+<button  type="button" onclick="dauNhan()">Multiplication(*)</button>
+<button  type="button" onclick="dauChia()">Division(/)</button>
+<br>
+<p style="color: red"> Result Division:</p>
+<h3 id="cc"></h3>
+</form>
+
+<script>
+    function dauCong() {
+        let n3 = document.getElementById("n1").value;
+        let n4 = document.getElementById("n2").value;
+        let a1 = parseInt(n3);
+        let a2 = parseInt(n4);
+        let a3 = a1 + a2;
+        document.getElementById("cc").innerText = a3;
+
+    }
+
+    function dauTru() {
+        let n5 = document.getElementById("n1").value;
+        let n6 = document.getElementById("n2").value;
+        let a4 = n5 - n6;
+        document.getElementById("cc").innerText = a4
+    }
+
+    function dauNhan() {
+        let n7 = document.getElementById("n1").value;
+        let n8 = document.getElementById("n2").value;
+        let a5 = n7 * n8;
+        document.getElementById("cc").innerText = a5
+    }
+
+    function dauChia() {
+        let n9 = document.getElementById("n1").value;
+        let n10 = document.getElementById("n2").value;
+        let a6 = n9 / n10;
+        document.getElementById("cc").innerText = a6
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h1 style="color: red"> Chuyển đổi giá tiền</h1>
+    <label>Amount</label>
+    <br>
+    <input type="text" id="nhapvao">
+    <br><br>
+    <label>From Currency</label>
+    <br>
+    <select name=""id="a1">
+        <option value="a">VND</option>
+        <option value="b">USD</option>
+    </select>
+    <br>
+    <label>To currency</label>
+    <br>
+    <select name=""id="a2">
+        <option value="a">VND</option>
+        <option value="b">USD</option>
+    </select>
+    <br><br>
+    <button style="background-color: cornflowerblue" onclick="chuyenDoi()">Convert</button>
+</form>
+<script>
+function chuyenDoi() {
+    let sonhapvao = document.getElementById('nhapvao').value;
+let a1 = document.getElementById('a1').value ;
+let a2 = document.getElementById('a2').value ;
+if (a1==a2){
+    alert(sonhapvao);
+}
+if (a1 =='a' && a2 =='b') {
+   document.write('Đổi sang'+ sonhapvao/24000 +'USD');
+}
+if (a1=='b' && a2=='a'){
+   document.write('Đổi sang'+ sonhapvao*24000 + 'VND')
+}
+}
+</script>
+</body>
+</html>
