@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let isLeapYear = false;
+
+    let isDivisibleBy4 = 400 % 4 == 0;
+    if (isDivisibleBy4) {
+        let isDivisibleBy100 = 400 % 100 == 0;
+        if (isDivisibleBy100) {
+            let isDivisibleBy400 = 400 % 400 == 0;
+            if (isDivisibleBy400) {
+                isLeapYear = true;
+            }
+        } else {
+            isLeapYear = true;
+        }
+    }
+
+    if (isLeapYear) {
+        alert(400 + " is a leap year");
+    } else {
+        alert(400 + " is NOT a leap year");
+    }
+</script>
+</body>
+</html>
