@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1 style="color: red"> Tính chỉ số BMI</h1>
+    <p contenteditable="">Height(in cm)</p>
+    <input type="text" id="height" placeholder="Your Height">
+    <p> Weight(in kg)</p>
+    <input type="text" id="weight" placeholder="Your Weight">
+    <br><br>
+    <button type="submit" id="cal">Caculate</button>
+    <div id="result"></div>
+</div>
+<script>
+     let height1 = document.getElementById('height');
+     let weight1 = document.getElementById('weight');
+     let cal = document.getElementById('cal');
+
+    function caculate(height, weight) {
+       if (height <=0 || weight <=0 || isNaN(height) || isNaN(weight)){
+           alert('No Caculate');
+       } else {
+           height = height/100
+           let bmi = weight / ( height ^ 2 );
+           return bmi;
+       }
+}
+cal.onclick = function result() {
+let height = height1.value;
+let weight = weight1.value;
+let bmi = caculate(height,weight).value;
+    if (bmi < 18)
+        document.write("Underweight");
+    else if (bmi < 25.0)
+        document.write("Normal");
+    else if (bmi < 30.0)
+        document.write("Overweight");
+    else
+        document.write("Obese");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

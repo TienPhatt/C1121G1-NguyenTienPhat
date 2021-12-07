@@ -6,13 +6,14 @@
 </head>
 <body>
 <script>
+    let year= parseInt(prompt("Nhập số năm"));
     let isLeapYear = false;
 
-    let isDivisibleBy4 = 400 % 4 == 0;
+    let isDivisibleBy4 = year % 4 == 0;
     if (isDivisibleBy4) {
-        let isDivisibleBy100 = 400 % 100 == 0;
+        let isDivisibleBy100 = year % 100 == 0;
         if (isDivisibleBy100) {
-            let isDivisibleBy400 = 400 % 400 == 0;
+            let isDivisibleBy400 = year % 400 == 0;
             if (isDivisibleBy400) {
                 isLeapYear = true;
             }
@@ -22,9 +23,9 @@
     }
 
     if (isLeapYear) {
-        alert(400 + " is a leap year");
+        alert(year + " is a leap year");
     } else {
-        alert(400 + " is NOT a leap year");
+        alert(year + " is NOT a leap year");
     }
 </script>
 </body>
