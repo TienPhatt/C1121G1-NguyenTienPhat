@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text">
+<script>
+//1p đầu tiên * 1000đ
+    //Sau 1 phút +500đ 1 phút
+    let a = parseInt(prompt("Số phút gọi:"));
+    let b;
+    if (a<=1){
+        b =(a*1000);
+        alert("Số tiền phải trả: " + b +"VND");
+    } else{
+        b = (a*1500);
+        alert("Số tiền phải trả: " + b +"VND");
+    }
+</script>
 </body>
 </html>

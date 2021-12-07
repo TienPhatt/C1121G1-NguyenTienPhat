@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // phương trình bậc 2 công thức : ax**2+bx+c=0
+    // Giải: (d=b**2-4*a*c) để tìm x
+    let a =(parseInt(prompt("Nhập số a:")));
+    let b =(parseInt(prompt("Nhập số b:")));
+    let c =(parseInt(prompt("Nhập số c:")));
+    let d = ((b**2)-4*a*c);
+    let e;
+    let r;
+    if (d<0){
+        alert("Phương trình vô nghiệm");
+    } else if (d>0){
+        e = (((-b)+Math.sqrt(d)/2*a));
+        r = (((-b)-Math.sqrt(d)/2*a));
+        alert("x1 =" + e +"x2 ="+r);
+    } else{
+        e=r=(-(b/2*a));
+        alert("x1 =" + e +"x2 ="+r);
+    }
+
+
+</script>
+</body>
+</html>

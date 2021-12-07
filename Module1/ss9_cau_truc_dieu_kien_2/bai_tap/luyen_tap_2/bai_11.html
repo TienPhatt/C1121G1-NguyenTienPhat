@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Thu nhập dưới 5tr đóng 5% thuế,trên 5tr đóng 10%
+    let a = prompt("Tổng thu nhập:");
+    let b;
+    if (a<5000000){
+        b = (a * (5 / 100));
+        alert("Tiền thuế đóng= " + b + " VND");
+    }else {
+        b = (a *(10/100));
+        alert("Tiền thuế đóng= " + b + " VND");
+    }
+
+
+</script>
+</body>
+</html>
