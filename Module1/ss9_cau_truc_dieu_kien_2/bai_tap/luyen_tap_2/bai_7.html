@@ -6,25 +6,30 @@
 </head>
 <body>
 <script>
-    // phương trình bậc 2 công thức : ax**2+bx+c=0
+    // phương trình bậc 2 công thức : ax*x+bx+c=0
     // Giải: (d=b**2-4*a*c) để tìm x
-    let a =(parseInt(prompt("Nhập số a:")));
-    let b =(parseInt(prompt("Nhập số b:")));
-    let c =(parseInt(prompt("Nhập số c:")));
-    let d = ((b**2)-4*a*c);
-    let e;
-    let r;
-    if (d<0){
-        alert("Phương trình vô nghiệm");
-    } else if (d>0){
-        e = (((-b)+Math.sqrt(d)/2*a));
-        r = (((-b)-Math.sqrt(d)/2*a));
-        alert("x1 =" + e +"x2 ="+r);
-    } else{
-        e=r=(-(b/2*a));
-        alert("x1 =" + e +"x2 ="+r);
+    let a = (parseInt(prompt("Nhập số a:")));
+    let b = (parseInt(prompt("Nhập số b:")));
+    let c = (parseInt(prompt("Nhập số c:")));
+    let d;
+    let x;
+    let x1;
+    let x2;
+    if (a == 0) {
+        alert("Phương trình có nghiệm là: " + (-c / b));
+    } else {
+        d = b * b - 4 * a * c;
+        if (d < 0) {
+            alert("Phương trình vô nghiệm");
+        } else if (d == 0) {
+            x = -b / 2 * a;
+            alert("Phương trình có nghiệm kép: " + x);
+        } else {
+            x1 = (-b - Math.sqrt(d)) / 2 * a;
+            x2 = (-b + Math.sqrt(d)) / 2 * a;
+            alert("Phương trình có 2 nghiệm: " + x1 + "và" + x2);
+        }
     }
-
 
 </script>
 </body>
