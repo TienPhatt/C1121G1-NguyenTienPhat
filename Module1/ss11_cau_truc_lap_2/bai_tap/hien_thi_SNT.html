@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = prompt("Nhập số lượng SNT cần in:");
+    let count = 0;
+    let n=2;
+    let result = "";
+    while (count < numbers) {
+        if (kiemTraSNT(n)==true) {
+            count++;
+            result += n + ',';
+        }
+        n++;
+    }
+    document.write("Dãy số nguyên tố:" + result)
+
+    function kiemTraSNT(n) {
+        if (n < 2){
+            return false;
+        }else {
+            for(let i=2;i<=Math.sqrt(n);i++){
+                if (n%i===0){
+                    return false;
+                }
+            }
+        }
+        return true;
+            }
+</script>
+</body>
+</html>

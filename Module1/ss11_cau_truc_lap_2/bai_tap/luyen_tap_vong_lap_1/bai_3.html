@@ -6,13 +6,15 @@
 </head>
 <body>
 <script>
-
-    for (let n1 = 0; n1<=5; n1++) {
-        for(let n2=1;n2<=5;n2++){
-
-          document.write(n1);
-        }
-    }
+   let n1 = 0;
+   let n2 = 1;
+   let n3;
+   for (i=1;i<=20;i++){
+       document.write(n1+" ");
+       n3=n1+n2;
+       n1=n2;
+       n2=n3;
+   }
 </script>
 </body>
 </html>
