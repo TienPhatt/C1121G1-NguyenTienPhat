@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt("");
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for (let x = 0; x < arr.length; x++) {
+        if (UPPER.indexOf(arr[x]) !== -1) {
+            result.push(arr[x].toLowerCase());
+        } else if (LOWER.indexOf(arr[x]) !== -1) {
+            result.push(arr[x].toUpperCase());
+        } else {
+            result.push(arr[x]);
+        }
+    }
+    document.write(result.join(''));
+
+</script>
+</body>
+</html>
