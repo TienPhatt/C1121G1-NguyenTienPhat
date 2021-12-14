@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SCRIPT>
+    let size = parseInt(prompt('Nhập vào chiều dài mảng :'));
+    let arr = new Array(size);
+    let arr2 = new Array(size)
+    for (let i = 0; i < size; i++) {
+        arr[i] = parseInt(prompt('nhập số nguyên mảng a ' + i))
+    }
+    for (let j = 0; j < size; j++) {
+        arr2[j] = parseInt(prompt('Nhập số nguyên mảng b ' + j))
+    }
+    document.write('Mảng 1 có chuỗi; ' + arr);
+    document.write('<br>');
+    document.write('Mảng 2 có chuỗi; ' + arr2);
+    document.write('<br>');
+    let count = 0;
+    let result = "";
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            if (arr[i] == arr2[j]) {
+                count += 1;
+                result += arr[i] + ',';
+                continue;
+            }
+        }
+    }
+    document.write('Có ' + count + ' phần tử giống nhau là : ' + result);
+</SCRIPT>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<script>
+    let size = parseInt(prompt('Nhập vào chiều dài mảng :'));
+    let arr = new Array(size);
+    let arr2 = new Array(size)
+    for (let i = 0; i < size; i++) {
+        arr[i] = parseInt(prompt('nhập số nguyên mảng a ' + i))
+    }
+    for (let j = 0; j < size; j++) {
+        arr2[j] = parseInt(prompt('Nhập số nguyên mảng b ' + j))
+    }
+    let arr3 = arr.concat(arr2);
+    document.write('Mảng c: ' + arr3);
+</script>
+</body>
+</html>

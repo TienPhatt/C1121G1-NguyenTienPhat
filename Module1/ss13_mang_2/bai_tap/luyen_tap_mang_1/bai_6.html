@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let size = parseInt(prompt('Nhập vào chiều dài mảng :'));
+    let array = new Array(size);
+    for (let i = 0; i < size; i++) {
+        array[i] = parseInt(prompt('Nhập số nguyên ' + i))
+    }
+    let V = parseInt(prompt('Nhập số nguyên V cần tìm: '));
+    let check = true;
+    for (let i = 0; i < size; i++) {
+        if (array[i] == V) {
+            check = true;
+            break;
+        } else {
+            check = false;
+            continue;
+        }
+    }
+    if (check) {
+        alert(V + 'is in the array');
+    } else {
+        alert(V + 'is not in the array');
+    }
+</script>
+</body>
+</html>

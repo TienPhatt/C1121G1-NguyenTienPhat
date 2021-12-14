@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let size;
+    let check;
+    do {
+        size = prompt("Nhâp size của mảng: ");
+        check = parseInt(size) == size;
+    } while (!check);
+    let arr = new Array(parseInt(size));
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt("Nhập phần tử là: " + i));
+    }
+
+    let count = (String(arr).match(/[0-9]/g) || []).length;
+    document.write('Số phần tử có giá trị bằng số trong mảng là: ' + count + ' phần tử');
+</script>
+</body>
+</html>

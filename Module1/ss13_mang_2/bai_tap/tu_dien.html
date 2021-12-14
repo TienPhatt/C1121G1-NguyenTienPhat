@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3> Từ điển Anh - Việt </h3>
+<p>Nhập</p>
+<input type="text" id="en">
+<br><br>
+<input type="text" id="vn">
+<br><br>
+<input type="button" id="submit" value="Tìm Kiếm">
+<script>
+    let submit = document.getElementById('submit');
+    submit.addEventListener('click', timKiem);
+
+    function timKiem() {
+        let english = ["hello", "my", "you"];
+        let vietnam = ["xin chào", "của tôi", "bạn"];
+        let input = document.getElementById("en").value;
+        let index;
+        let ketQua = false;
+        for (let i = 0; i < english.length; i++) {
+            if (input == english[i]) {
+                ketQua = true;
+                index = i;
+                break;
+            }
+        }
+        if (ketQua) {
+            document.getElementById("vn").value = vietnam[index];
+        } else {
+            document.getElementById("vn").value = "Không tìm được";
+        }
+    }
+</script>
+</body>
+</html>
