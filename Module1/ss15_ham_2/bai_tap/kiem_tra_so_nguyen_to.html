@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p>Nhập số cần tìm</p>
+    <input type="number" id="soNguyen">
+    <br><br>
+    <input type="button" onclick="isPrime()">
+    <div id="result"></div>
+</div>
+<script>
+    let a = document.getElementById("soNguyen");
+    function isPrime(number) {
+        let n = a.value;
+        let flag = true;
+        if (n < 2) {
+            flag = false;
+        } else if (n == 2) {
+            flag = true;
+        } else if (n % 2 == 0) {
+            flag = false;
+        } else {
+            for (let i = 3; i < n - 1; i++) {
+                if (n % 1 == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag == true) {
+            document.getElementById("result").innerHTML = n + ' là số nguyên tố ';
+        } else {
+            document.getElementById("result").innerHTML = n + ' không là số nguyên tố';
+        }
+    }
+</script>
+</body>
+</html>

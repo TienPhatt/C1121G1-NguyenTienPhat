@@ -7,28 +7,20 @@
 <body>
 <script>
     let size = parseInt(prompt('Nhập vào chiều dài mảng :'));
-    let array = new Array(size); // khởi tạo mảng với chiều dài = size;
+    let array = new Array(size);
     for (let i = 0; i < size; i++) {
         array[i] = parseInt(prompt('Nhập số nguyên ' + i));
     }
     let V = parseInt(prompt('Nhập số nguyên V cần tìm: '));
-    let check = true;
-    for (let i = 0; i < size; i++) {
+    for (let i = 0; i < array.length; i++) {
         if (array[i] == V) {
-            check = true;
-            break;
-        } else {
-            check = false;
-            array.pop();
-            array.push(0);
-            continue;
+            for (let j = i; j < array.length - 1; j++) {
+                array[j] = array[j + 1];
+            }
         }
+        array[array.length - 1] = 0;
     }
-    if (check) {
-        document.write(V + ' Có trong phần tử');
-    } else {
-        document.write(array);
-    }
+    alert(array);
 </script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" oninput="nhapSo(this.value)">
+<p>Kết quả: <span id="hienThi"></span></p>
+<script>
+    function nhapSo(so1) {
+        so1 = parseFloat(so1);
+        document.getElementById("hienThi").innerHTML = so1 + 1;
+    }
+</script>
+</body>
+</html>
