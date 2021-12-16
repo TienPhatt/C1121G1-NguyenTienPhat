@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ngoiSao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let a = prompt("Gọi tên ngôi sao:");
+
+    function timKiem() {
+        let ketQua = false;
+        for (let i = 0; i < ngoiSao.length; i++) {
+            if (a === ngoiSao[i]) {
+                alert("Ngôi sao " + ngoiSao[i] + " thuộc chòm sao " + chomSao[i]);
+                ketQua = true;
+                break;
+            }
+        }
+        if (!ketQua) {
+            alert("Không có ngôi sao nào cả");
+        }
+    }
+
+    timKiem()
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập 1 số bất kì: ");
+    function kiemTra() {
+        let check;
+        check = (a == parseInt(a) && a>0);
+        return check;
+    }
+    if (kiemTra()) {
+        alert("Là số nguyên dương ");
+    } else {
+        alert("Không phải là số nguyên dương ");
+    }
+    kiemTra()
+</script>
+</body>
+</html>
